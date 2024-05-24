@@ -12,8 +12,8 @@ public class StockService {
 
     private final StockRepository stockRepository;
 
-    @Transactional
-    public void decrease(Long id, Long quantity) {
+//    @Transactional
+    public synchronized void decrease(Long id, Long quantity) {
         // stock 조회
         // 재고 감소
         // 갱신된 값 저장
